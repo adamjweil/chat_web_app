@@ -17,6 +17,7 @@ class RoomsController < ApplicationController
 
     if @room.save
       flash[:success] = "Room #{@room.name} was created successfully"
+      # sleep(5)
       redirect_to rooms_path
     else
       render :new
